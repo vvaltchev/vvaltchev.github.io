@@ -51,17 +51,14 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>The library's main header file.  
+<p>Tfblib's main header file.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="tfb__errors_8h_source.html">tfb_errors.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tfb__errors_8h.html">tfb_errors.h</a>&quot;</code><br />
 <code>#include &quot;tfb_inline_funcs.h&quot;</code><br />
-<code>#include &quot;tfb_kb.h&quot;</code><br />
-</div>
-<p><a href="tfblib_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtfb__font__info.html">tfb_font_info</a></td></tr>
@@ -92,20 +89,21 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__flags.html#gafd07d33e70f3d13d2195212b304d17dc">TFB_FONT_ANY_HEIGHT</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memdesc:gafd07d33e70f3d13d2195212b304d17dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">When passed to the 'h' param of <a class="el" href="tfblib_8h.html#af740b10101937a78623042370585d465" title="Select the first font matching the given (w, h) criteria. ">tfb_set_font_by_size()</a>, means that any font height is acceptable. <br /></td></tr>
 <tr class="separator:gafd07d33e70f3d13d2195212b304d17dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga651f27d6a1058f23c5cdddae14f817bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__flags.html#ga651f27d6a1058f23c5cdddae14f817bc">TFB_FL_KB_NONBLOCK</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
-<tr class="memdesc:ga651f27d6a1058f23c5cdddae14f817bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-blocking input mode.  <a href="group__flags.html#ga651f27d6a1058f23c5cdddae14f817bc">More...</a><br /></td></tr>
-<tr class="separator:ga651f27d6a1058f23c5cdddae14f817bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7357958f3f6a809c7e52b5e3c96f5188"><td class="memItemLeft" align="right" valign="top"><a id="a7357958f3f6a809c7e52b5e3c96f5188"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a7357958f3f6a809c7e52b5e3c96f5188">TFB_HUE_DEGREE</a>&#160;&#160;&#160;256</td></tr>
+<tr class="memdesc:a7357958f3f6a809c7e52b5e3c96f5188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value for 1 degree (of 360) of hue, when passed to <a class="el" href="tfblib_8h.html#a50a166b8341f8b89b3bf2334a638f181" title="Get a representation of the HSV color (h, s, v) for the current video mode. ">tfb_make_color_hsv()</a> <br /></td></tr>
+<tr class="separator:a7357958f3f6a809c7e52b5e3c96f5188"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a6f5522c14a8a8842bf803c0988b5f459"><td class="memItemLeft" align="right" valign="top"><a id="a6f5522c14a8a8842bf803c0988b5f459"></a>
+typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a6f5522c14a8a8842bf803c0988b5f459">tfb_font_t</a></td></tr>
+<tr class="memdesc:a6f5522c14a8a8842bf803c0988b5f459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque font type. <br /></td></tr>
+<tr class="separator:a6f5522c14a8a8842bf803c0988b5f459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaef476c8709a487519d0377a3d2ba413"><td class="memItemLeft" align="right" valign="top"><a id="aaef476c8709a487519d0377a3d2ba413"></a>
 typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#aaef476c8709a487519d0377a3d2ba413">tfb_font_iter_func</a>) (<a class="el" href="structtfb__font__info.html">tfb_font_info</a> *cb, void *user_arg)</td></tr>
 <tr class="memdesc:aaef476c8709a487519d0377a3d2ba413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback type accepted by <a class="el" href="tfblib_8h.html#a4747cd25b181d9bceed45015d8d39e70" title="Iterate over the fonts embedded in the library. ">tfb_iterate_over_fonts()</a>. <br /></td></tr>
 <tr class="separator:aaef476c8709a487519d0377a3d2ba413"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29dac9071a0238ee6b7b0ac8bc20368b"><td class="memItemLeft" align="right" valign="top"><a id="a29dac9071a0238ee6b7b0ac8bc20368b"></a>
-typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a29dac9071a0238ee6b7b0ac8bc20368b">tfb_key_t</a></td></tr>
-<tr class="memdesc:a29dac9071a0238ee6b7b0ac8bc20368b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Library's type used to represent keystrokes. <br /></td></tr>
-<tr class="separator:a29dac9071a0238ee6b7b0ac8bc20368b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -124,15 +122,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a4747cd25b181d9bceed45015d8d39e70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a4747cd25b181d9bceed45015d8d39e70">tfb_iterate_over_fonts</a> (<a class="el" href="tfblib_8h.html#aaef476c8709a487519d0377a3d2ba413">tfb_font_iter_func</a> cb, void *user_arg)</td></tr>
 <tr class="memdesc:a4747cd25b181d9bceed45015d8d39e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over the fonts embedded in the library.  <a href="#a4747cd25b181d9bceed45015d8d39e70">More...</a><br /></td></tr>
 <tr class="separator:a4747cd25b181d9bceed45015d8d39e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8203a58fdf7924166351557354f6d969"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a8203a58fdf7924166351557354f6d969">tfb_set_current_font</a> (void *font_id)</td></tr>
-<tr class="memdesc:a8203a58fdf7924166351557354f6d969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the font used by the functions for drawing text.  <a href="#a8203a58fdf7924166351557354f6d969">More...</a><br /></td></tr>
-<tr class="separator:a8203a58fdf7924166351557354f6d969"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc20ebea7c600296e9aa47f757be20e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#afc20ebea7c600296e9aa47f757be20e9">tfb_dyn_load_font</a> (const char *file, void **font_id)</td></tr>
-<tr class="memdesc:afc20ebea7c600296e9aa47f757be20e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load dynamically a PSF font file.  <a href="#afc20ebea7c600296e9aa47f757be20e9">More...</a><br /></td></tr>
-<tr class="separator:afc20ebea7c600296e9aa47f757be20e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6cbacf8df1a487003c959c195c742f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#ab6cbacf8df1a487003c959c195c742f4">tfb_dyn_unload_font</a> (void *font_id)</td></tr>
-<tr class="memdesc:ab6cbacf8df1a487003c959c195c742f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a dynamically-loaded font.  <a href="#ab6cbacf8df1a487003c959c195c742f4">More...</a><br /></td></tr>
-<tr class="separator:ab6cbacf8df1a487003c959c195c742f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47353d0e66fd5afcb2207cd60de98240"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a47353d0e66fd5afcb2207cd60de98240">tfb_set_current_font</a> (<a class="el" href="tfblib_8h.html#a6f5522c14a8a8842bf803c0988b5f459">tfb_font_t</a> font_id)</td></tr>
+<tr class="memdesc:a47353d0e66fd5afcb2207cd60de98240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the font used by the functions for drawing text.  <a href="#a47353d0e66fd5afcb2207cd60de98240">More...</a><br /></td></tr>
+<tr class="separator:a47353d0e66fd5afcb2207cd60de98240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90b06616006d6aa96c42e3ed864f4de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#ab90b06616006d6aa96c42e3ed864f4de">tfb_dyn_load_font</a> (const char *file, <a class="el" href="tfblib_8h.html#a6f5522c14a8a8842bf803c0988b5f459">tfb_font_t</a> *font_id)</td></tr>
+<tr class="memdesc:ab90b06616006d6aa96c42e3ed864f4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load dynamically a PSF font file.  <a href="#ab90b06616006d6aa96c42e3ed864f4de">More...</a><br /></td></tr>
+<tr class="separator:ab90b06616006d6aa96c42e3ed864f4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d81566a93529a621e3ca63abd8d4e61"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a3d81566a93529a621e3ca63abd8d4e61">tfb_dyn_unload_font</a> (<a class="el" href="tfblib_8h.html#a6f5522c14a8a8842bf803c0988b5f459">tfb_font_t</a> font_id)</td></tr>
+<tr class="memdesc:a3d81566a93529a621e3ca63abd8d4e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a dynamically-loaded font.  <a href="#a3d81566a93529a621e3ca63abd8d4e61">More...</a><br /></td></tr>
+<tr class="separator:a3d81566a93529a621e3ca63abd8d4e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af740b10101937a78623042370585d465"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#af740b10101937a78623042370585d465">tfb_set_font_by_size</a> (int w, int h)</td></tr>
 <tr class="memdesc:af740b10101937a78623042370585d465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select the first font matching the given (w, h) criteria.  <a href="#af740b10101937a78623042370585d465">More...</a><br /></td></tr>
 <tr class="separator:af740b10101937a78623042370585d465"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,74 +140,75 @@ Functions</h2></td></tr>
 <tr class="memitem:ae215f9f0a0a4758f137b1cce4e7770d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#ae215f9f0a0a4758f137b1cce4e7770d9">tfb_get_curr_font_height</a> (void)</td></tr>
 <tr class="memdesc:ae215f9f0a0a4758f137b1cce4e7770d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current font's height.  <a href="#ae215f9f0a0a4758f137b1cce4e7770d9">More...</a><br /></td></tr>
 <tr class="separator:ae215f9f0a0a4758f137b1cce4e7770d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a28853eb67a338d9bc12cccdefe06c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a7a28853eb67a338d9bc12cccdefe06c1">tfb_set_kb_raw_mode</a> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> flags)</td></tr>
-<tr class="memdesc:a7a28853eb67a338d9bc12cccdefe06c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the TTY keyboard input to raw mode.  <a href="#a7a28853eb67a338d9bc12cccdefe06c1">More...</a><br /></td></tr>
-<tr class="separator:a7a28853eb67a338d9bc12cccdefe06c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4759720a56d371c4e13e3634057d579a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a4759720a56d371c4e13e3634057d579a">tfb_restore_kb_mode</a> (void)</td></tr>
-<tr class="memdesc:a4759720a56d371c4e13e3634057d579a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore the TTY keyboard input to its previous state.  <a href="#a4759720a56d371c4e13e3634057d579a">More...</a><br /></td></tr>
-<tr class="separator:a4759720a56d371c4e13e3634057d579a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b9ca6051e3437c7abdde59b678d68e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tfblib_8h.html#a29dac9071a0238ee6b7b0ac8bc20368b">tfb_key_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a2b9ca6051e3437c7abdde59b678d68e2">tfb_read_keypress</a> (void)</td></tr>
-<tr class="memdesc:a2b9ca6051e3437c7abdde59b678d68e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a keystroke.  <a href="#a2b9ca6051e3437c7abdde59b678d68e2">More...</a><br /></td></tr>
-<tr class="separator:a2b9ca6051e3437c7abdde59b678d68e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdc772a746a72d8b7336b424296d5525"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#acdc772a746a72d8b7336b424296d5525">tfb_get_fn_key_num</a> (<a class="el" href="tfblib_8h.html#a29dac9071a0238ee6b7b0ac8bc20368b">tfb_key_t</a> k)</td></tr>
-<tr class="memdesc:acdc772a746a72d8b7336b424296d5525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of the F key corresponding to 'k'.  <a href="#acdc772a746a72d8b7336b424296d5525">More...</a><br /></td></tr>
-<tr class="separator:acdc772a746a72d8b7336b424296d5525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71b2b2c603dfa43619b926905bb104a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a71b2b2c603dfa43619b926905bb104a6">tfb_make_color</a> (<a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a> r, <a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a> g, <a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a> b)</td></tr>
 <tr class="memdesc:a71b2b2c603dfa43619b926905bb104a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a representation of the RGB color (r, g, b) for the current video mode.  <a href="#a71b2b2c603dfa43619b926905bb104a6">More...</a><br /></td></tr>
 <tr class="separator:a71b2b2c603dfa43619b926905bb104a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84f97fb84ce668fda3fe288e2ba61f24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a84f97fb84ce668fda3fe288e2ba61f24">tfb_draw_pixel</a> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
-<tr class="memdesc:a84f97fb84ce668fda3fe288e2ba61f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the pixel at (x, y) to 'color'.  <a href="#a84f97fb84ce668fda3fe288e2ba61f24">More...</a><br /></td></tr>
-<tr class="separator:a84f97fb84ce668fda3fe288e2ba61f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaf9bf90a2bb8e951349d94d1119d9fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#aaaf9bf90a2bb8e951349d94d1119d9fb">tfb_draw_hline</a> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> len, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
-<tr class="memdesc:aaaf9bf90a2bb8e951349d94d1119d9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a horizonal line on-screen.  <a href="#aaaf9bf90a2bb8e951349d94d1119d9fb">More...</a><br /></td></tr>
-<tr class="separator:aaaf9bf90a2bb8e951349d94d1119d9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8de58b86f050d948e8e4105e1bff13c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a8de58b86f050d948e8e4105e1bff13c4">tfb_draw_vline</a> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> len, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
-<tr class="memdesc:a8de58b86f050d948e8e4105e1bff13c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a vertical line on-screen.  <a href="#a8de58b86f050d948e8e4105e1bff13c4">More...</a><br /></td></tr>
-<tr class="separator:a8de58b86f050d948e8e4105e1bff13c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08453e60252134889a6062f5d1e1ccfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a08453e60252134889a6062f5d1e1ccfc">tfb_draw_line</a> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x0, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y0, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x1, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y1, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
-<tr class="memdesc:a08453e60252134889a6062f5d1e1ccfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a line on-screen.  <a href="#a08453e60252134889a6062f5d1e1ccfc">More...</a><br /></td></tr>
-<tr class="separator:a08453e60252134889a6062f5d1e1ccfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a516e7b7f0d58f970d25d8fb4e3e4281b"><td class="memItemLeft" align="right" valign="top"><a id="a516e7b7f0d58f970d25d8fb4e3e4281b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_draw_rect</b> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> w, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> h, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
-<tr class="separator:a516e7b7f0d58f970d25d8fb4e3e4281b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7398d3dafe07821d6bd967f92df5937"><td class="memItemLeft" align="right" valign="top"><a id="ac7398d3dafe07821d6bd967f92df5937"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_fill_rect</b> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> w, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> h, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
-<tr class="separator:ac7398d3dafe07821d6bd967f92df5937"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b4e5444926723d685737357359f67fa"><td class="memItemLeft" align="right" valign="top"><a id="a3b4e5444926723d685737357359f67fa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_draw_char</b> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg_color, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg_color, <a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a> c)</td></tr>
-<tr class="separator:a3b4e5444926723d685737357359f67fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee9e33721a1812e56711fb6c55538da0"><td class="memItemLeft" align="right" valign="top"><a id="aee9e33721a1812e56711fb6c55538da0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_draw_string</b> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg_color, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg_color, const char *s)</td></tr>
-<tr class="separator:aee9e33721a1812e56711fb6c55538da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe34d0cc4f9d7fe4459575955e661333"><td class="memItemLeft" align="right" valign="top"><a id="afe34d0cc4f9d7fe4459575955e661333"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_draw_center_string</b> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> cx, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg, const char *s)</td></tr>
-<tr class="separator:afe34d0cc4f9d7fe4459575955e661333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75af8f21958ea5620c40ca0adbfa8639"><td class="memItemLeft" align="right" valign="top"><a id="a75af8f21958ea5620c40ca0adbfa8639"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_draw_char_scaled</b> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> xscale, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> yscale, <a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a> c)</td></tr>
-<tr class="separator:a75af8f21958ea5620c40ca0adbfa8639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a095c72c4796f5fb3634ec8e6f676ea78"><td class="memItemLeft" align="right" valign="top"><a id="a095c72c4796f5fb3634ec8e6f676ea78"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_draw_string_scaled</b> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> xscale, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> yscale, const char *s)</td></tr>
-<tr class="separator:a095c72c4796f5fb3634ec8e6f676ea78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1fa5bce22440c3d03ce3880030f1a42"><td class="memItemLeft" align="right" valign="top"><a id="ad1fa5bce22440c3d03ce3880030f1a42"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_draw_center_string_scaled</b> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> cx, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> xscale, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> yscale, const char *s)</td></tr>
-<tr class="separator:ad1fa5bce22440c3d03ce3880030f1a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a991c475223e7a09ebc4871aee38a06ee"><td class="memItemLeft" align="right" valign="top"><a id="a991c475223e7a09ebc4871aee38a06ee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_clear_screen</b> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memitem:a50a166b8341f8b89b3bf2334a638f181"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a50a166b8341f8b89b3bf2334a638f181">tfb_make_color_hsv</a> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> h, <a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a> s, <a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a> v)</td></tr>
+<tr class="memdesc:a50a166b8341f8b89b3bf2334a638f181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a representation of the HSV color (h, s, v) for the current video mode.  <a href="#a50a166b8341f8b89b3bf2334a638f181">More...</a><br /></td></tr>
+<tr class="separator:a50a166b8341f8b89b3bf2334a638f181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3159b7f0b17fe3e5e5722bbd4d3ed1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a0c3159b7f0b17fe3e5e5722bbd4d3ed1">tfb_draw_pixel</a> (int x, int y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memdesc:a0c3159b7f0b17fe3e5e5722bbd4d3ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the pixel at (x, y) to 'color'.  <a href="#a0c3159b7f0b17fe3e5e5722bbd4d3ed1">More...</a><br /></td></tr>
+<tr class="separator:a0c3159b7f0b17fe3e5e5722bbd4d3ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9da97916ec074beebce62397bd1f870"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#aa9da97916ec074beebce62397bd1f870">tfb_draw_hline</a> (int x, int y, int len, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memdesc:aa9da97916ec074beebce62397bd1f870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a horizonal line on-screen.  <a href="#aa9da97916ec074beebce62397bd1f870">More...</a><br /></td></tr>
+<tr class="separator:aa9da97916ec074beebce62397bd1f870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94634e335f4cf7b0981f84b34e21e98c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a94634e335f4cf7b0981f84b34e21e98c">tfb_draw_vline</a> (int x, int y, int len, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memdesc:a94634e335f4cf7b0981f84b34e21e98c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a vertical line on-screen.  <a href="#a94634e335f4cf7b0981f84b34e21e98c">More...</a><br /></td></tr>
+<tr class="separator:a94634e335f4cf7b0981f84b34e21e98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a192e7bfab5cc468a6454e0e18f8b9a80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a192e7bfab5cc468a6454e0e18f8b9a80">tfb_draw_line</a> (int x0, int y0, int x1, int y1, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memdesc:a192e7bfab5cc468a6454e0e18f8b9a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a line on-screen.  <a href="#a192e7bfab5cc468a6454e0e18f8b9a80">More...</a><br /></td></tr>
+<tr class="separator:a192e7bfab5cc468a6454e0e18f8b9a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf33c6ddb55dd037cc4207b2ac7cd27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#aadf33c6ddb55dd037cc4207b2ac7cd27">tfb_draw_rect</a> (int x, int y, int w, int h, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memdesc:aadf33c6ddb55dd037cc4207b2ac7cd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an empty rectangle on-screen.  <a href="#aadf33c6ddb55dd037cc4207b2ac7cd27">More...</a><br /></td></tr>
+<tr class="separator:aadf33c6ddb55dd037cc4207b2ac7cd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11866522376fe89285b18131a4e970d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a11866522376fe89285b18131a4e970d4">tfb_fill_rect</a> (int x, int y, int w, int h, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memdesc:a11866522376fe89285b18131a4e970d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw filled rectangle on-screen.  <a href="#a11866522376fe89285b18131a4e970d4">More...</a><br /></td></tr>
+<tr class="separator:a11866522376fe89285b18131a4e970d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788670c2cd1ac6a96e9d5d95124e00b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a788670c2cd1ac6a96e9d5d95124e00b9">tfb_draw_char</a> (int x, int y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg, <a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a> c)</td></tr>
+<tr class="memdesc:a788670c2cd1ac6a96e9d5d95124e00b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a single character on-screen at (x, y)  <a href="#a788670c2cd1ac6a96e9d5d95124e00b9">More...</a><br /></td></tr>
+<tr class="separator:a788670c2cd1ac6a96e9d5d95124e00b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b1c4c4fcf33d334cacfe9d669be80c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a11b1c4c4fcf33d334cacfe9d669be80c">tfb_draw_string</a> (int x, int y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg, const char *s)</td></tr>
+<tr class="memdesc:a11b1c4c4fcf33d334cacfe9d669be80c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a NUL-terminated string on-screen at (x, y)  <a href="#a11b1c4c4fcf33d334cacfe9d669be80c">More...</a><br /></td></tr>
+<tr class="separator:a11b1c4c4fcf33d334cacfe9d669be80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea770ed732b7457d9a3a1045259c81f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#aea770ed732b7457d9a3a1045259c81f4">tfb_draw_xcenter_string</a> (int cx, int y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg, const char *s)</td></tr>
+<tr class="memdesc:aea770ed732b7457d9a3a1045259c81f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a NUL-terminated string on-screen having its X-center at 'cx'.  <a href="#aea770ed732b7457d9a3a1045259c81f4">More...</a><br /></td></tr>
+<tr class="separator:aea770ed732b7457d9a3a1045259c81f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af0590e179166aa523dc1633a98c642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a0af0590e179166aa523dc1633a98c642">tfb_draw_char_scaled</a> (int x, int y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg, int xscale, int yscale, <a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a> c)</td></tr>
+<tr class="memdesc:a0af0590e179166aa523dc1633a98c642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a single character on-screen at (x, y) scaled by (xscale, yscale)  <a href="#a0af0590e179166aa523dc1633a98c642">More...</a><br /></td></tr>
+<tr class="separator:a0af0590e179166aa523dc1633a98c642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aec4a63fd78ad2ce4454230bfc077c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a3aec4a63fd78ad2ce4454230bfc077c4">tfb_draw_string_scaled</a> (int x, int y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg, int xscale, int yscale, const char *s)</td></tr>
+<tr class="memdesc:a3aec4a63fd78ad2ce4454230bfc077c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a NUL-terminated string on-screen at (x, y) scaled by (xscale, yscale)  <a href="#a3aec4a63fd78ad2ce4454230bfc077c4">More...</a><br /></td></tr>
+<tr class="separator:a3aec4a63fd78ad2ce4454230bfc077c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8c725930d116d45a69f389f8091cd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a9f8c725930d116d45a69f389f8091cd6">tfb_draw_xcenter_string_scaled</a> (int cx, int y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg, int xscale, int yscale, const char *s)</td></tr>
+<tr class="memdesc:a9f8c725930d116d45a69f389f8091cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a NUL-terminated string on-screen having its X-center at 'cx' (scaled)  <a href="#a9f8c725930d116d45a69f389f8091cd6">More...</a><br /></td></tr>
+<tr class="separator:a9f8c725930d116d45a69f389f8091cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991c475223e7a09ebc4871aee38a06ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a991c475223e7a09ebc4871aee38a06ee">tfb_clear_screen</a> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memdesc:a991c475223e7a09ebc4871aee38a06ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all the pixels of the screen to the supplied color.  <a href="#a991c475223e7a09ebc4871aee38a06ee">More...</a><br /></td></tr>
 <tr class="separator:a991c475223e7a09ebc4871aee38a06ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9bd53afa2f14da6449b3c04639a8bee"><td class="memItemLeft" align="right" valign="top"><a id="ae9bd53afa2f14da6449b3c04639a8bee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_clear_win</b> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memitem:ae9bd53afa2f14da6449b3c04639a8bee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#ae9bd53afa2f14da6449b3c04639a8bee">tfb_clear_win</a> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memdesc:ae9bd53afa2f14da6449b3c04639a8bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all the pixels of the current window to the supplied color.  <a href="#ae9bd53afa2f14da6449b3c04639a8bee">More...</a><br /></td></tr>
 <tr class="separator:ae9bd53afa2f14da6449b3c04639a8bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecb3327d7824ac77099c9a2d685f742a"><td class="memItemLeft" align="right" valign="top"><a id="aecb3327d7824ac77099c9a2d685f742a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_flush_window</b> (void)</td></tr>
+<tr class="memitem:a8ea105ca1f44c38b70ebf28654289dee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a8ea105ca1f44c38b70ebf28654289dee">tfb_screen_width</a> (void)</td></tr>
+<tr class="memdesc:a8ea105ca1f44c38b70ebf28654289dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get screen's width.  <a href="#a8ea105ca1f44c38b70ebf28654289dee">More...</a><br /></td></tr>
+<tr class="separator:a8ea105ca1f44c38b70ebf28654289dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a671c067ee4188def34d656b1b36fa947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a671c067ee4188def34d656b1b36fa947">tfb_screen_height</a> (void)</td></tr>
+<tr class="memdesc:a671c067ee4188def34d656b1b36fa947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get screen's height.  <a href="#a671c067ee4188def34d656b1b36fa947">More...</a><br /></td></tr>
+<tr class="separator:a671c067ee4188def34d656b1b36fa947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976af3c310ff9ec799ece4f09cfa9fe1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a976af3c310ff9ec799ece4f09cfa9fe1">tfb_win_width</a> (void)</td></tr>
+<tr class="memdesc:a976af3c310ff9ec799ece4f09cfa9fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current window's width.  <a href="#a976af3c310ff9ec799ece4f09cfa9fe1">More...</a><br /></td></tr>
+<tr class="separator:a976af3c310ff9ec799ece4f09cfa9fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b03899a97f648a79d2f9d3480f513dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a1b03899a97f648a79d2f9d3480f513dd">tfb_win_height</a> (void)</td></tr>
+<tr class="memdesc:a1b03899a97f648a79d2f9d3480f513dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current window's height.  <a href="#a1b03899a97f648a79d2f9d3480f513dd">More...</a><br /></td></tr>
+<tr class="separator:a1b03899a97f648a79d2f9d3480f513dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b432d8b7a6ffaaf1f1d3678a833b6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a91b432d8b7a6ffaaf1f1d3678a833b6c">tfb_flush_rect</a> (int x, int y, int w, int h)</td></tr>
+<tr class="memdesc:a91b432d8b7a6ffaaf1f1d3678a833b6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush a given region to the actual framebuffer.  <a href="#a91b432d8b7a6ffaaf1f1d3678a833b6c">More...</a><br /></td></tr>
+<tr class="separator:a91b432d8b7a6ffaaf1f1d3678a833b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb3327d7824ac77099c9a2d685f742a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#aecb3327d7824ac77099c9a2d685f742a">tfb_flush_window</a> (void)</td></tr>
+<tr class="memdesc:aecb3327d7824ac77099c9a2d685f742a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush the current window to the actual framebuffer.  <a href="#aecb3327d7824ac77099c9a2d685f742a">More...</a><br /></td></tr>
 <tr class="separator:aecb3327d7824ac77099c9a2d685f742a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86b574368a69067d4a88832a0358f006"><td class="memItemLeft" align="right" valign="top"><a id="a86b574368a69067d4a88832a0358f006"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_flush_rect</b> (<a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> x, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> w, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> h)</td></tr>
-<tr class="separator:a86b574368a69067d4a88832a0358f006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The library's main header file. </p>
-
-<p class="definition">Definition in file <a class="el" href="tfblib_8h_source.html">tfblib.h</a>.</p>
+<div class="textblock"><p>Tfblib's main header file. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a138c39502cfff1fad462fc61dbfe9229"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a138c39502cfff1fad462fc61dbfe9229">&#9670;&nbsp;</a></span>tfb_acquire_fb()</h2>
@@ -254,7 +253,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_flush_rect</b> (<
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="group___error_codes.html#ga291ee1df6f3c6b5d88c00c216c064de0" title="The call completed successfully without any errors. ">TFB_SUCCESS</a> in case of success or one of the following errors: <a class="el" href="group___error_codes.html#ga3791e1c622b14c0767c2d066e86255c7" title="open() failed on the framebuffer device ">TFB_ERR_OPEN_FB</a>, <a class="el" href="group___error_codes.html#ga4f4ca4a579a0a1b4235f90e429900198" title="ioctl() failed on the framebuffer device file descriptor ">TFB_ERR_IOCTL_FB</a>, <a class="el" href="group___error_codes.html#gad1f2374db04634f88b3dbb26b9e68f4c" title="Unsupported video mode. ">TFB_ERR_UNSUPPORTED_VIDEO_MODE</a>, <a class="el" href="group___error_codes.html#ga7f6bc53097625d50e52225f9077cf18b" title="ioctl() on the TTY failed while trying to set TTY in graphic mode ">TFB_ERR_TTY_GRAPHIC_MODE</a>, <a class="el" href="group___error_codes.html#ga42d70414744c60e7d826a955076d9fb1" title="mmap() on the framebuffer file description failed ">TFB_ERR_MMAP_FB</a>, <a class="el" href="group___error_codes.html#ga06a367dc6f3b04fbea89a6ff75925b32" title="Out of memory (malloc() returned 0) ">TFB_ERR_OUT_OF_MEMORY</a>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function does not affect the kb mode. <a class="el" href="tfblib_8h.html#a7a28853eb67a338d9bc12cccdefe06c1" title="Set the TTY keyboard input to raw mode. ">tfb_set_kb_raw_mode()</a> can be called before or after <a class="el" href="tfblib_8h.html#a138c39502cfff1fad462fc61dbfe9229" title="Opens and maps the framebuffer device in the current address space. ">tfb_acquire_fb()</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function does not affect the kb mode. <a class="el" href="tfb__kb_8h.html#a4cb162f0cdb98591e9357f2f47695aa9" title="Set the TTY keyboard input to raw mode. ">tfb_set_kb_raw_mode()</a> can be called before or after <a class="el" href="tfblib_8h.html#a138c39502cfff1fad462fc61dbfe9229" title="Opens and maps the framebuffer device in the current address space. ">tfb_acquire_fb()</a>. </dd></dl>
 
 </div>
 </div>
@@ -277,7 +276,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>tfb_flush_rect</b> (<
 <p>Release the framebuffer device. </p>
 <dl class="section note"><dt>Note</dt><dd>The function <b>must</b> be called before exiting, otherwise the TTY will remain in graphics mode and be unusable.</dd>
 <dd>
-This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html#a7a28853eb67a338d9bc12cccdefe06c1" title="Set the TTY keyboard input to raw mode. ">tfb_set_kb_raw_mode()</a> has been used, <a class="el" href="tfblib_8h.html#a4759720a56d371c4e13e3634057d579a" title="Restore the TTY keyboard input to its previous state. ">tfb_restore_kb_mode()</a> must be called to restore the kb mode to its original value. </dd></dl>
+This function does not affect the kb mode. If <a class="el" href="tfb__kb_8h.html#a4cb162f0cdb98591e9357f2f47695aa9" title="Set the TTY keyboard input to raw mode. ">tfb_set_kb_raw_mode()</a> has been used, <a class="el" href="tfb__kb_8h.html#a4759720a56d371c4e13e3634057d579a" title="Restore the TTY keyboard input to its previous state. ">tfb_restore_kb_mode()</a> must be called to restore the kb mode to its original value. </dd></dl>
 
 </div>
 </div>
@@ -411,8 +410,8 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
 
 </div>
 </div>
-<a id="a8203a58fdf7924166351557354f6d969"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8203a58fdf7924166351557354f6d969">&#9670;&nbsp;</a></span>tfb_set_current_font()</h2>
+<a id="a47353d0e66fd5afcb2207cd60de98240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47353d0e66fd5afcb2207cd60de98240">&#9670;&nbsp;</a></span>tfb_set_current_font()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,7 +419,7 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
         <tr>
           <td class="memname">int tfb_set_current_font </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a6f5522c14a8a8842bf803c0988b5f459">tfb_font_t</a>&#160;</td>
           <td class="paramname"><em>font_id</em></td><td>)</td>
           <td></td>
         </tr>
@@ -430,7 +429,7 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
 <p>Set the font used by the functions for drawing text. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">font_id</td><td>An opaque identifier provided by the library either as a member of <a class="el" href="structtfb__font__info.html" title="Font info structure. ">tfb_font_info</a>, or returned as an out parameter by <a class="el" href="tfblib_8h.html#afc20ebea7c600296e9aa47f757be20e9" title="Load dynamically a PSF font file. ">tfb_dyn_load_font()</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font_id</td><td>An opaque identifier provided by the library either as a member of <a class="el" href="structtfb__font__info.html" title="Font info structure. ">tfb_font_info</a>, or returned as an out parameter by <a class="el" href="tfblib_8h.html#ab90b06616006d6aa96c42e3ed864f4de" title="Load dynamically a PSF font file. ">tfb_dyn_load_font()</a>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -438,8 +437,8 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
 
 </div>
 </div>
-<a id="afc20ebea7c600296e9aa47f757be20e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc20ebea7c600296e9aa47f757be20e9">&#9670;&nbsp;</a></span>tfb_dyn_load_font()</h2>
+<a id="ab90b06616006d6aa96c42e3ed864f4de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90b06616006d6aa96c42e3ed864f4de">&#9670;&nbsp;</a></span>tfb_dyn_load_font()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,7 +452,7 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void **&#160;</td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a6f5522c14a8a8842bf803c0988b5f459">tfb_font_t</a> *&#160;</td>
           <td class="paramname"><em>font_id</em>&#160;</td>
         </tr>
         <tr>
@@ -468,7 +467,7 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>File path </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">font_id</td><td>Address of a void *font_id opaque pointer that will be set by the function in case of success.</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">font_id</td><td>Address of a tfb_font_t variable that will be set by the function in case of success.</td></tr>
   </table>
   </dd>
 </dl>
@@ -476,8 +475,8 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
 
 </div>
 </div>
-<a id="ab6cbacf8df1a487003c959c195c742f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6cbacf8df1a487003c959c195c742f4">&#9670;&nbsp;</a></span>tfb_dyn_unload_font()</h2>
+<a id="a3d81566a93529a621e3ca63abd8d4e61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d81566a93529a621e3ca63abd8d4e61">&#9670;&nbsp;</a></span>tfb_dyn_unload_font()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -485,7 +484,7 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
         <tr>
           <td class="memname">int tfb_dyn_unload_font </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a6f5522c14a8a8842bf803c0988b5f459">tfb_font_t</a>&#160;</td>
           <td class="paramname"><em>font_id</em></td><td>)</td>
           <td></td>
         </tr>
@@ -495,7 +494,7 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
 <p>Unload a dynamically-loaded font. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">font_id</td><td>Opaque pointer returned by <a class="el" href="tfblib_8h.html#afc20ebea7c600296e9aa47f757be20e9" title="Load dynamically a PSF font file. ">tfb_dyn_load_font()</a></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font_id</td><td>Opaque pointer returned by <a class="el" href="tfblib_8h.html#ab90b06616006d6aa96c42e3ed864f4de" title="Load dynamically a PSF font file. ">tfb_dyn_load_font()</a></td></tr>
   </table>
   </dd>
 </dl>
@@ -584,96 +583,6 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
 
 </div>
 </div>
-<a id="a7a28853eb67a338d9bc12cccdefe06c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a28853eb67a338d9bc12cccdefe06c1">&#9670;&nbsp;</a></span>tfb_set_kb_raw_mode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int tfb_set_kb_raw_mode </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
-          <td class="paramname"><em>flags</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the TTY keyboard input to raw mode. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>Default value: 0. The only currently supported flag is <a class="el" href="group__flags.html#ga651f27d6a1058f23c5cdddae14f817bc" title="Non-blocking input mode. ">TFB_FL_KB_NONBLOCK</a>.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group___error_codes.html#ga291ee1df6f3c6b5d88c00c216c064de0" title="The call completed successfully without any errors. ">TFB_SUCCESS</a> in case of success, otherwise one of the following errors: <a class="el" href="group___error_codes.html#ga7e72b952cd4778271ff7b6670d36c84a" title="The keyboard input is not in the expected mode (e.g. already in raw mode) ">TFB_ERR_KB_WRONG_MODE</a>, <a class="el" href="group___error_codes.html#ga5aab25840e42f3119b00cb9755cb2e2f" title="Unable to get a keyboard input paramater with ioctl() ">TFB_ERR_KB_MODE_GET_FAILED</a>, <a class="el" href="group___error_codes.html#ga8793b1c4d733eca7220d46bb3d85d351" title="Unable to set a keyboard input paramater with ioctl() ">TFB_ERR_KB_MODE_SET_FAILED</a>. </dd></dl>
-
-</div>
-</div>
-<a id="a4759720a56d371c4e13e3634057d579a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4759720a56d371c4e13e3634057d579a">&#9670;&nbsp;</a></span>tfb_restore_kb_mode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int tfb_restore_kb_mode </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Restore the TTY keyboard input to its previous state. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group___error_codes.html#ga291ee1df6f3c6b5d88c00c216c064de0" title="The call completed successfully without any errors. ">TFB_SUCCESS</a> in case of success, otherwise one of the following errors: <a class="el" href="group___error_codes.html#ga7e72b952cd4778271ff7b6670d36c84a" title="The keyboard input is not in the expected mode (e.g. already in raw mode) ">TFB_ERR_KB_WRONG_MODE</a>, <a class="el" href="group___error_codes.html#ga8793b1c4d733eca7220d46bb3d85d351" title="Unable to set a keyboard input paramater with ioctl() ">TFB_ERR_KB_MODE_SET_FAILED</a>. </dd></dl>
-
-</div>
-</div>
-<a id="a2b9ca6051e3437c7abdde59b678d68e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b9ca6051e3437c7abdde59b678d68e2">&#9670;&nbsp;</a></span>tfb_read_keypress()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="tfblib_8h.html#a29dac9071a0238ee6b7b0ac8bc20368b">tfb_key_t</a> tfb_read_keypress </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read a keystroke. </p>
-<dl class="section return"><dt>Returns</dt><dd>An ASCII character or one of the values TFB_KEY_*. In case the input is non-blocking (<a class="el" href="group__flags.html#ga651f27d6a1058f23c5cdddae14f817bc" title="Non-blocking input mode. ">TFB_FL_KB_NONBLOCK</a>), returns 0 in case there was no keystroke to return. </dd></dl>
-
-</div>
-</div>
-<a id="acdc772a746a72d8b7336b424296d5525"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdc772a746a72d8b7336b424296d5525">&#9670;&nbsp;</a></span>tfb_get_fn_key_num()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int tfb_get_fn_key_num </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a29dac9071a0238ee6b7b0ac8bc20368b">tfb_key_t</a>&#160;</td>
-          <td class="paramname"><em>k</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the number of the F key corresponding to 'k'. </p>
-<dl class="section return"><dt>Returns</dt><dd>A number in the range [1, 12] in case 'k' is equal to one of the TFB_KEY_F* values. Otherwise, return 0. </dd></dl>
-
-</div>
-</div>
 <a id="a71b2b2c603dfa43619b926905bb104a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71b2b2c603dfa43619b926905bb104a6">&#9670;&nbsp;</a></span>tfb_make_color()</h2>
 
@@ -723,14 +632,58 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A framebuffer-specific representation of the RGB color passed in the r, g, b parameters. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="tfb__inline__funcs_8h_source.html#l00034">34</a> of file <a class="el" href="tfb__inline__funcs_8h_source.html">tfb_inline_funcs.h</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>A framebuffer-specific representation of the RGB color passed using the r, g, b parameters. </dd></dl>
 
 </div>
 </div>
-<a id="a84f97fb84ce668fda3fe288e2ba61f24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84f97fb84ce668fda3fe288e2ba61f24">&#9670;&nbsp;</a></span>tfb_draw_pixel()</h2>
+<a id="a50a166b8341f8b89b3bf2334a638f181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50a166b8341f8b89b3bf2334a638f181">&#9670;&nbsp;</a></span>tfb_make_color_hsv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> tfb_make_color_hsv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a>&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a>&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a representation of the HSV color (h, s, v) for the current video mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Hue [0, 360 * <a class="el" href="tfblib_8h.html#a7357958f3f6a809c7e52b5e3c96f5188" title="Value for 1 degree (of 360) of hue, when passed to tfb_make_color_hsv() ">TFB_HUE_DEGREE</a>] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>Saturation [0, 255] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>Value (Brightness) [0, 255]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A framebuffer-specific representation of the HSV color passed using the h, s, v parameters.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>1 degree of hue is <a class="el" href="tfblib_8h.html#a7357958f3f6a809c7e52b5e3c96f5188" title="Value for 1 degree (of 360) of hue, when passed to tfb_make_color_hsv() ">TFB_HUE_DEGREE</a>, not simply 1. This is necessary in order to increase the precision of the internal integer-only computations. </dd></dl>
+
+</div>
+</div>
+<a id="a0c3159b7f0b17fe3e5e5722bbd4d3ed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c3159b7f0b17fe3e5e5722bbd4d3ed1">&#9670;&nbsp;</a></span>tfb_draw_pixel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -741,13 +694,13 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
         <tr>
           <td class="memname">void tfb_draw_pixel </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
@@ -780,12 +733,10 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
 </dl>
 <dl class="section note"><dt>Note</dt><dd>By default, the library uses as "window" the whole screen, therefore by default the point (x, y) corresponds to the pixel at (x, y) on the screen. But, after calling <a class="el" href="tfblib_8h.html#af7292ae84c7e86ec925dcb09201d7add" title="Limit the drawing to a window at (x, y) having size (w, h) ">tfb_set_window()</a> the origin of the coordinate system gets shifted. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tfb__inline__funcs_8h_source.html#l00041">41</a> of file <a class="el" href="tfb__inline__funcs_8h_source.html">tfb_inline_funcs.h</a>.</p>
-
 </div>
 </div>
-<a id="aaaf9bf90a2bb8e951349d94d1119d9fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaf9bf90a2bb8e951349d94d1119d9fb">&#9670;&nbsp;</a></span>tfb_draw_hline()</h2>
+<a id="aa9da97916ec074beebce62397bd1f870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9da97916ec074beebce62397bd1f870">&#9670;&nbsp;</a></span>tfb_draw_hline()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -793,19 +744,19 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
         <tr>
           <td class="memname">void tfb_draw_hline </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>len</em>, </td>
         </tr>
         <tr>
@@ -833,12 +784,12 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
   </dd>
 </dl>
 <p>Calling tfb_draw_hline(x, y, len, color) is equivalent to calling: tfb_draw_line(x, y, x + len, y, color)</p>
-<p>The only difference between the two functions is in the implementation: given the simpler task of <a class="el" href="tfblib_8h.html#aaaf9bf90a2bb8e951349d94d1119d9fb" title="Draw a horizonal line on-screen. ">tfb_draw_hline()</a>, it can be implemented in much more efficient way. </p>
+<p>The only difference between the two functions is in the implementation: given the simpler task of <a class="el" href="tfblib_8h.html#aa9da97916ec074beebce62397bd1f870" title="Draw a horizonal line on-screen. ">tfb_draw_hline()</a>, it can be implemented in much more efficient way. </p>
 
 </div>
 </div>
-<a id="a8de58b86f050d948e8e4105e1bff13c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8de58b86f050d948e8e4105e1bff13c4">&#9670;&nbsp;</a></span>tfb_draw_vline()</h2>
+<a id="a94634e335f4cf7b0981f84b34e21e98c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94634e335f4cf7b0981f84b34e21e98c">&#9670;&nbsp;</a></span>tfb_draw_vline()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -846,19 +797,19 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
         <tr>
           <td class="memname">void tfb_draw_vline </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>len</em>, </td>
         </tr>
         <tr>
@@ -886,12 +837,12 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
   </dd>
 </dl>
 <p>Calling tfb_draw_vline(x, y, len, color) is equivalent to calling: tfb_draw_line(x, y, x, y + len, color)</p>
-<p>The only difference between the two functions is in the implementation: given the simpler task of <a class="el" href="tfblib_8h.html#a8de58b86f050d948e8e4105e1bff13c4" title="Draw a vertical line on-screen. ">tfb_draw_vline()</a>, it can be implemented in much more efficient way. </p>
+<p>The only difference between the two functions is in the implementation: given the simpler task of <a class="el" href="tfblib_8h.html#a94634e335f4cf7b0981f84b34e21e98c" title="Draw a vertical line on-screen. ">tfb_draw_vline()</a>, it can be implemented in much more efficient way. </p>
 
 </div>
 </div>
-<a id="a08453e60252134889a6062f5d1e1ccfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08453e60252134889a6062f5d1e1ccfc">&#9670;&nbsp;</a></span>tfb_draw_line()</h2>
+<a id="a192e7bfab5cc468a6454e0e18f8b9a80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a192e7bfab5cc468a6454e0e18f8b9a80">&#9670;&nbsp;</a></span>tfb_draw_line()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -899,25 +850,25 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
         <tr>
           <td class="memname">void tfb_draw_line </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>x0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>y0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>x1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>y1</em>, </td>
         </tr>
         <tr>
@@ -945,6 +896,780 @@ This function does not affect the kb mode. If <a class="el" href="tfblib_8h.html
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aadf33c6ddb55dd037cc4207b2ac7cd27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf33c6ddb55dd037cc4207b2ac7cd27">&#9670;&nbsp;</a></span>tfb_draw_rect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_draw_rect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw an empty rectangle on-screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Window-relative X coordinate of rect's top-left corner </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Window-relative Y coordinate of rect's top-left corner </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>Width of the rectangle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Height of the rectangle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color of the rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a11866522376fe89285b18131a4e970d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11866522376fe89285b18131a4e970d4">&#9670;&nbsp;</a></span>tfb_fill_rect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_fill_rect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw filled rectangle on-screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Window-relative X coordinate of rect's top-left corner </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Window-relative Y coordinate of rect's top-left corner </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>Width of the rectangle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Height of the rectangle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color of the rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a788670c2cd1ac6a96e9d5d95124e00b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a788670c2cd1ac6a96e9d5d95124e00b9">&#9670;&nbsp;</a></span>tfb_draw_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_draw_char </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>fg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>bg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a>&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a single character on-screen at (x, y) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Window-relative X coordinate of character's position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Window-relative Y coordinate of character's position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fg</td><td>Foreground text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bg</td><td>Background text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>The character to draw on-screen </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a11b1c4c4fcf33d334cacfe9d669be80c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11b1c4c4fcf33d334cacfe9d669be80c">&#9670;&nbsp;</a></span>tfb_draw_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_draw_string </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>fg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>bg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a NUL-terminated string on-screen at (x, y) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Window-relative X coordinate of text's position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Window-relative Y coordinate of text's position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fg</td><td>Foreground text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bg</td><td>Background text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>A char pointer to the string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea770ed732b7457d9a3a1045259c81f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea770ed732b7457d9a3a1045259c81f4">&#9670;&nbsp;</a></span>tfb_draw_xcenter_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_draw_xcenter_string </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>fg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>bg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a NUL-terminated string on-screen having its X-center at 'cx'. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cx</td><td>Window-relative X coordinate of text's X center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Window-relative Y coordinate of text's Y position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fg</td><td>Foreground text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bg</td><td>Background text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>A char pointer to the string</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function draws the given string by centering it horizonally at 'cx', while 'y' coordinate is used as-it-is. In other words, 'y' is the distance in pixels from the top of the current window to the top of the text.</p>
+<pre class="fragment">    (Window -&gt; the whole screen by default)
+#=======================================================#-------+
+#                                                       #       |
+#                                                       #       | y
+#     (x0, y)           (cx, y)                         #       |
+#        +-----------------+-----------------+ ---------#-------+
+#        | This is some text string centered |          #
+#        +-----------------+-----------------+          #
+#                          |                            #
+#                          |                            #
+#=======================================================#
+|                          |
++--------------------------+
+             cx
+
+x0 is calculated as:
+      cx - curr_font_width * string_length / 2</pre> 
+</div>
+</div>
+<a id="a0af0590e179166aa523dc1633a98c642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af0590e179166aa523dc1633a98c642">&#9670;&nbsp;</a></span>tfb_draw_char_scaled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_draw_char_scaled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>fg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>bg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xscale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>yscale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a>&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a single character on-screen at (x, y) scaled by (xscale, yscale) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Window-relative X coordinate of character's position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Window-relative Y coordinate of character's position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fg</td><td>Foreground text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bg</td><td>Background text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xscale</td><td>Horizontal scale </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">yscale</td><td>Vertical scale </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>The character to draw on-screen</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Like <a class="el" href="tfblib_8h.html#a788670c2cd1ac6a96e9d5d95124e00b9" title="Draw a single character on-screen at (x, y) ">tfb_draw_char()</a> but the current font is graphically scaled xscale times horizontally and yscale times vertically. This useful when a font much bigger than any available is needed. Also, it might be useful to create a simple special effect by stretching a font only in one dimention (e.g. xscale=2, yscale=1).</p>
+<dl class="section note"><dt>Note</dt><dd>Because of the scaling, <a class="el" href="tfblib_8h.html#a0af0590e179166aa523dc1633a98c642" title="Draw a single character on-screen at (x, y) scaled by (xscale, yscale) ">tfb_draw_char_scaled()</a> as well as all the other tfb_draw_*_scaled() functions, is slower than their non-scaled versions. Avoid using xscale=1 and yscale=1 (for performance reasons). </dd></dl>
+
+</div>
+</div>
+<a id="a3aec4a63fd78ad2ce4454230bfc077c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aec4a63fd78ad2ce4454230bfc077c4">&#9670;&nbsp;</a></span>tfb_draw_string_scaled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_draw_string_scaled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>fg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>bg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xscale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>yscale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a NUL-terminated string on-screen at (x, y) scaled by (xscale, yscale) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Window-relative X coordinate of text's position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Window-relative Y coordinate of text's position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fg</td><td>Foreground text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bg</td><td>Background text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xscale</td><td>Horizontal scale </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">yscale</td><td>Vertical scale </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>A char pointer to the string</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Like <a class="el" href="tfblib_8h.html#a11b1c4c4fcf33d334cacfe9d669be80c" title="Draw a NUL-terminated string on-screen at (x, y) ">tfb_draw_string()</a>, but scaled. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="tfblib_8h.html#a0af0590e179166aa523dc1633a98c642" title="Draw a single character on-screen at (x, y) scaled by (xscale, yscale) ">tfb_draw_char_scaled()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a9f8c725930d116d45a69f389f8091cd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f8c725930d116d45a69f389f8091cd6">&#9670;&nbsp;</a></span>tfb_draw_xcenter_string_scaled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_draw_xcenter_string_scaled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>fg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>bg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xscale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>yscale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a NUL-terminated string on-screen having its X-center at 'cx' (scaled) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cx</td><td>Window-relative X coordinate of text's X center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Window-relative Y coordinate of text's Y position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fg</td><td>Foreground text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bg</td><td>Background text color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xscale</td><td>Horizontal scale </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">yscale</td><td>Vertical scale </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>A char pointer to the string</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Like <a class="el" href="tfblib_8h.html#aea770ed732b7457d9a3a1045259c81f4" title="Draw a NUL-terminated string on-screen having its X-center at &#39;cx&#39;. ">tfb_draw_xcenter_string()</a>, but scaled. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="tfblib_8h.html#a0af0590e179166aa523dc1633a98c642" title="Draw a single character on-screen at (x, y) scaled by (xscale, yscale) ">tfb_draw_char_scaled()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a991c475223e7a09ebc4871aee38a06ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991c475223e7a09ebc4871aee38a06ee">&#9670;&nbsp;</a></span>tfb_clear_screen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_clear_screen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set all the pixels of the screen to the supplied color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>The color. See <a class="el" href="tfblib_8h.html#a71b2b2c603dfa43619b926905bb104a6" title="Get a representation of the RGB color (r, g, b) for the current video mode. ">tfb_make_color()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae9bd53afa2f14da6449b3c04639a8bee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9bd53afa2f14da6449b3c04639a8bee">&#9670;&nbsp;</a></span>tfb_clear_win()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_clear_win </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set all the pixels of the current window to the supplied color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>The color. See <a class="el" href="tfblib_8h.html#a71b2b2c603dfa43619b926905bb104a6" title="Get a representation of the RGB color (r, g, b) for the current video mode. ">tfb_make_color()</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Unless <a class="el" href="tfblib_8h.html#af7292ae84c7e86ec925dcb09201d7add" title="Limit the drawing to a window at (x, y) having size (w, h) ">tfb_set_window()</a> has been called, the current window is by default large as the whole screen. </dd></dl>
+
+</div>
+</div>
+<a id="a8ea105ca1f44c38b70ebf28654289dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ea105ca1f44c38b70ebf28654289dee">&#9670;&nbsp;</a></span>tfb_screen_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> tfb_screen_width </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get screen's width. </p>
+<dl class="section return"><dt>Returns</dt><dd>the width of the screen in pixels </dd></dl>
+
+</div>
+</div>
+<a id="a671c067ee4188def34d656b1b36fa947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a671c067ee4188def34d656b1b36fa947">&#9670;&nbsp;</a></span>tfb_screen_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> tfb_screen_height </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get screen's height. </p>
+<dl class="section return"><dt>Returns</dt><dd>the height of the screen in pixels </dd></dl>
+
+</div>
+</div>
+<a id="a976af3c310ff9ec799ece4f09cfa9fe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a976af3c310ff9ec799ece4f09cfa9fe1">&#9670;&nbsp;</a></span>tfb_win_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> tfb_win_width </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get current window's width. </p>
+<dl class="section return"><dt>Returns</dt><dd>the width of the current window </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="tfblib_8h.html#af7292ae84c7e86ec925dcb09201d7add" title="Limit the drawing to a window at (x, y) having size (w, h) ">tfb_set_window()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a1b03899a97f648a79d2f9d3480f513dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b03899a97f648a79d2f9d3480f513dd">&#9670;&nbsp;</a></span>tfb_win_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> tfb_win_height </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get current window's height. </p>
+<dl class="section return"><dt>Returns</dt><dd>the height of the current window </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="tfblib_8h.html#af7292ae84c7e86ec925dcb09201d7add" title="Limit the drawing to a window at (x, y) having size (w, h) ">tfb_set_window()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a91b432d8b7a6ffaaf1f1d3678a833b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b432d8b7a6ffaaf1f1d3678a833b6c">&#9670;&nbsp;</a></span>tfb_flush_rect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_flush_rect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flush a given region to the actual framebuffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Window-relative X coordinate of region's position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Window-relative Y coordinate of region's position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>Width of the region (in pixels) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Height of the region (in pixels)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>In case <a class="el" href="tfblib_8h.html#a138c39502cfff1fad462fc61dbfe9229" title="Opens and maps the framebuffer device in the current address space. ">tfb_acquire_fb()</a> has been called with <a class="el" href="group__flags.html#ga881910fa7e5f8b16affd2ba367ab1b7b" title="Do NOT write directly onto the framebuffer. ">TFB_FL_USE_DOUBLE_BUFFER</a>, this function copies the pixels in the specified region to actual framebuffer. By default double buffering is not used and this function has no effect. </p>
+
+</div>
+</div>
+<a id="aecb3327d7824ac77099c9a2d685f742a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecb3327d7824ac77099c9a2d685f742a">&#9670;&nbsp;</a></span>tfb_flush_window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_flush_window </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flush the current window to the actual framebuffer. </p>
+<p>A shortcut for tfb_flush_rect(0, 0, <a class="el" href="tfblib_8h.html#a976af3c310ff9ec799ece4f09cfa9fe1" title="Get current window&#39;s width. ">tfb_win_width()</a>, <a class="el" href="tfblib_8h.html#a1b03899a97f648a79d2f9d3480f513dd" title="Get current window&#39;s height. ">tfb_win_height()</a>).</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="tfblib_8h.html#a91b432d8b7a6ffaaf1f1d3678a833b6c" title="Flush a given region to the actual framebuffer. ">tfb_flush_rect</a> </dd>
+<dd>
+<a class="el" href="tfblib_8h.html#af7292ae84c7e86ec925dcb09201d7add" title="Limit the drawing to a window at (x, y) having size (w, h) ">tfb_set_window</a> </dd></dl>
 
 </div>
 </div>

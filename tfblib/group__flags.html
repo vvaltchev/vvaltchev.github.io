@@ -46,6 +46,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:ga651f27d6a1058f23c5cdddae14f817bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__flags.html#ga651f27d6a1058f23c5cdddae14f817bc">TFB_FL_KB_NONBLOCK</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="memdesc:ga651f27d6a1058f23c5cdddae14f817bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-blocking input mode.  <a href="#ga651f27d6a1058f23c5cdddae14f817bc">More...</a><br /></td></tr>
+<tr class="separator:ga651f27d6a1058f23c5cdddae14f817bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf4ba5cf13d5c6bc6d467ffbea3c4e10a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__flags.html#gaf4ba5cf13d5c6bc6d467ffbea3c4e10a">TFB_FL_NO_TTY_KD_GRAPHICS</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
 <tr class="memdesc:gaf4ba5cf13d5c6bc6d467ffbea3c4e10a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do NOT put TTY in graphics mode.  <a href="#gaf4ba5cf13d5c6bc6d467ffbea3c4e10a">More...</a><br /></td></tr>
 <tr class="separator:gaf4ba5cf13d5c6bc6d467ffbea3c4e10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -60,12 +63,26 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__flags.html#gafd07d33e70f3d13d2195212b304d17dc">TFB_FONT_ANY_HEIGHT</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memdesc:gafd07d33e70f3d13d2195212b304d17dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">When passed to the 'h' param of <a class="el" href="tfblib_8h.html#af740b10101937a78623042370585d465" title="Select the first font matching the given (w, h) criteria. ">tfb_set_font_by_size()</a>, means that any font height is acceptable. <br /></td></tr>
 <tr class="separator:gafd07d33e70f3d13d2195212b304d17dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga651f27d6a1058f23c5cdddae14f817bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__flags.html#ga651f27d6a1058f23c5cdddae14f817bc">TFB_FL_KB_NONBLOCK</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
-<tr class="memdesc:ga651f27d6a1058f23c5cdddae14f817bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-blocking input mode.  <a href="#ga651f27d6a1058f23c5cdddae14f817bc">More...</a><br /></td></tr>
-<tr class="separator:ga651f27d6a1058f23c5cdddae14f817bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga651f27d6a1058f23c5cdddae14f817bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga651f27d6a1058f23c5cdddae14f817bc">&#9670;&nbsp;</a></span>TFB_FL_KB_NONBLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TFB_FL_KB_NONBLOCK&#160;&#160;&#160;(1 &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Non-blocking input mode. </p>
+<p>When passed to <a class="el" href="tfb__kb_8h.html#a4cb162f0cdb98591e9357f2f47695aa9" title="Set the TTY keyboard input to raw mode. ">tfb_set_kb_raw_mode()</a>, this flag makes the TTY input to be non-blocking. </p>
+
+</div>
+</div>
 <a id="gaf4ba5cf13d5c6bc6d467ffbea3c4e10a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf4ba5cf13d5c6bc6d467ffbea3c4e10a">&#9670;&nbsp;</a></span>TFB_FL_NO_TTY_KD_GRAPHICS</h2>
 
@@ -80,8 +97,6 @@ Macros</h2></td></tr>
 
 <p>Do NOT put TTY in graphics mode. </p>
 <p>Passing this flag to <a class="el" href="tfblib_8h.html#a138c39502cfff1fad462fc61dbfe9229" title="Opens and maps the framebuffer device in the current address space. ">tfb_acquire_fb()</a> will allow to use the framebuffer and to see stdout on TTY as well. That usually is undesirable because the text written to TTY will overwrite the graphics. </p>
-
-<p class="definition">Definition at line <a class="el" href="tfblib_8h_source.html#l00043">43</a> of file <a class="el" href="tfblib_8h_source.html">tfblib.h</a>.</p>
 
 </div>
 </div>
@@ -98,28 +113,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Do NOT write directly onto the framebuffer. </p>
-<p>Passing this flag to <a class="el" href="tfblib_8h.html#a138c39502cfff1fad462fc61dbfe9229" title="Opens and maps the framebuffer device in the current address space. ">tfb_acquire_fb()</a> will make it allocate a regular memory buffer where all the writes (while drawing) will be directed to. The changes will appear on-screen only after manually called tfb_flush_rect() or tfb_flush_rect(). This flag is useful for applications needing to clean and redraw the whole screen (or part of it) very often (e.g. games) in order to avoid the annoying flicker effect. </p>
-
-<p class="definition">Definition at line <a class="el" href="tfblib_8h_source.html#l00055">55</a> of file <a class="el" href="tfblib_8h_source.html">tfblib.h</a>.</p>
-
-</div>
-</div>
-<a id="ga651f27d6a1058f23c5cdddae14f817bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga651f27d6a1058f23c5cdddae14f817bc">&#9670;&nbsp;</a></span>TFB_FL_KB_NONBLOCK</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TFB_FL_KB_NONBLOCK&#160;&#160;&#160;(1 &lt;&lt; 2)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Non-blocking input mode. </p>
-<p>When passed to <a class="el" href="tfblib_8h.html#a7a28853eb67a338d9bc12cccdefe06c1" title="Set the TTY keyboard input to raw mode. ">tfb_set_kb_raw_mode()</a>, this flag makes the TTY input to be non-blocking. </p>
-
-<p class="definition">Definition at line <a class="el" href="tfblib_8h_source.html#l00296">296</a> of file <a class="el" href="tfblib_8h_source.html">tfblib.h</a>.</p>
+<p>Passing this flag to <a class="el" href="tfblib_8h.html#a138c39502cfff1fad462fc61dbfe9229" title="Opens and maps the framebuffer device in the current address space. ">tfb_acquire_fb()</a> will make it allocate a regular memory buffer where all the writes (while drawing) will be directed to. The changes will appear on-screen only after manually called <a class="el" href="tfblib_8h.html#a91b432d8b7a6ffaaf1f1d3678a833b6c" title="Flush a given region to the actual framebuffer. ">tfb_flush_rect()</a> or <a class="el" href="tfblib_8h.html#a91b432d8b7a6ffaaf1f1d3678a833b6c" title="Flush a given region to the actual framebuffer. ">tfb_flush_rect()</a>. This flag is useful for applications needing to clean and redraw the whole screen (or part of it) very often (e.g. games) in order to avoid the annoying flicker effect. </p>
 
 </div>
 </div>
