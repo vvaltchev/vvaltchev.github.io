@@ -164,6 +164,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a11866522376fe89285b18131a4e970d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a11866522376fe89285b18131a4e970d4">tfb_fill_rect</a> (int x, int y, int w, int h, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
 <tr class="memdesc:a11866522376fe89285b18131a4e970d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw filled rectangle on-screen.  <a href="#a11866522376fe89285b18131a4e970d4">More...</a><br /></td></tr>
 <tr class="separator:a11866522376fe89285b18131a4e970d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a161edc5bbd3bbdda06649f117a6976ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a161edc5bbd3bbdda06649f117a6976ec">tfb_draw_circle</a> (int cx, int cy, int r, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memdesc:a161edc5bbd3bbdda06649f117a6976ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an empty circle on-screen.  <a href="#a161edc5bbd3bbdda06649f117a6976ec">More...</a><br /></td></tr>
+<tr class="separator:a161edc5bbd3bbdda06649f117a6976ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad906aa63e5e3b32d765edbe82ea7f025"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#ad906aa63e5e3b32d765edbe82ea7f025">tfb_fill_circle</a> (int cx, int cy, int r, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> color)</td></tr>
+<tr class="memdesc:ad906aa63e5e3b32d765edbe82ea7f025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a filled circle on-screen.  <a href="#ad906aa63e5e3b32d765edbe82ea7f025">More...</a><br /></td></tr>
+<tr class="separator:ad906aa63e5e3b32d765edbe82ea7f025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a788670c2cd1ac6a96e9d5d95124e00b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tfblib_8h.html#a788670c2cd1ac6a96e9d5d95124e00b9">tfb_draw_char</a> (int x, int y, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> fg, <a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a> bg, <a class="el" href="tfblib_8h.html#af3b86d961da0a3575b4f99c9ffaf01fd">u8</a> c)</td></tr>
 <tr class="memdesc:a788670c2cd1ac6a96e9d5d95124e00b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a single character on-screen at (x, y)  <a href="#a788670c2cd1ac6a96e9d5d95124e00b9">More...</a><br /></td></tr>
 <tr class="separator:a788670c2cd1ac6a96e9d5d95124e00b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1009,6 +1015,108 @@ This function does not affect the kb mode. If <a class="el" href="tfb__kb_8h.htm
     <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>Width of the rectangle </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Height of the rectangle </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color of the rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a161edc5bbd3bbdda06649f117a6976ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a161edc5bbd3bbdda06649f117a6976ec">&#9670;&nbsp;</a></span>tfb_draw_circle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_draw_circle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw an empty circle on-screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cx</td><td>X coordinate of circle's center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cy</td><td>Y coordinate of circle's center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>Circle's radius </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Circle's color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad906aa63e5e3b32d765edbe82ea7f025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad906aa63e5e3b32d765edbe82ea7f025">&#9670;&nbsp;</a></span>tfb_fill_circle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tfb_fill_circle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tfblib_8h.html#a332ccd83dfe2973e6cb2b61e4f3ab7e6">u32</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a filled circle on-screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cx</td><td>X coordinate of circle's center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cy</td><td>Y coordinate of circle's center </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>Circle's radius </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Circle's color </td></tr>
   </table>
   </dd>
 </dl>
